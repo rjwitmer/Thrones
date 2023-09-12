@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		CCD754C32AAF5F1E002673F6 /* ThronesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD754C22AAF5F1E002673F6 /* ThronesApp.swift */; };
-		CCD754C52AAF5F1E002673F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD754C42AAF5F1E002673F6 /* ContentView.swift */; };
+		CCD754C52AAF5F1E002673F6 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD754C42AAF5F1E002673F6 /* ListView.swift */; };
 		CCD754C72AAF5F1F002673F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD754C62AAF5F1F002673F6 /* Assets.xcassets */; };
 		CCD754CA2AAF5F1F002673F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD754C92AAF5F1F002673F6 /* Preview Assets.xcassets */; };
+		CCD754D12AAF6533002673F6 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD754D02AAF6533002673F6 /* House.swift */; };
+		CCD754D32AAF6CB6002673F6 /* HousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD754D22AAF6CB6002673F6 /* HousesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CCD754BF2AAF5F1E002673F6 /* Thrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD754C22AAF5F1E002673F6 /* ThronesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThronesApp.swift; sourceTree = "<group>"; };
-		CCD754C42AAF5F1E002673F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CCD754C42AAF5F1E002673F6 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		CCD754C62AAF5F1F002673F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCD754C92AAF5F1F002673F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCD754D02AAF6533002673F6 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		CCD754D22AAF6CB6002673F6 /* HousesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				CCD754C22AAF5F1E002673F6 /* ThronesApp.swift */,
-				CCD754C42AAF5F1E002673F6 /* ContentView.swift */,
+				CCD754D02AAF6533002673F6 /* House.swift */,
+				CCD754D22AAF6CB6002673F6 /* HousesViewModel.swift */,
+				CCD754C42AAF5F1E002673F6 /* ListView.swift */,
 				CCD754C62AAF5F1F002673F6 /* Assets.xcassets */,
 				CCD754C82AAF5F1F002673F6 /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD754C52AAF5F1E002673F6 /* ContentView.swift in Sources */,
+				CCD754C52AAF5F1E002673F6 /* ListView.swift in Sources */,
+				CCD754D12AAF6533002673F6 /* House.swift in Sources */,
 				CCD754C32AAF5F1E002673F6 /* ThronesApp.swift in Sources */,
+				CCD754D32AAF6CB6002673F6 /* HousesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
