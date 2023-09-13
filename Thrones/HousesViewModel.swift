@@ -13,9 +13,13 @@ class HousesViewModel: ObservableObject {
     @Published var houses: [House] = []
     @Published var isLoading = false
     
+    var pageNumber = 1
+    let pageSize = 50
     var urlString = "https://www.anapioficeandfire.com/api/houses?page=1&pageSize=50"
     
     func getData() async {
+        guard pageNumber != 0 else {return}     // Don't access more pages. You're done.
+        urlString = "https://www.anapioficeandfire.com/api/houses?page=\(pageNumber)&pageSize=50"
         print("🕸️ We are accessing the URL \(urlString)")
         isLoading = true
         // convert urlString to a special URL type
@@ -34,11 +38,34 @@ class HousesViewModel: ObservableObject {
                 isLoading = false
                 return
             }
-            self.houses = returned
+            self.houses += returned
             isLoading = false
+            if returned.count < pageSize {
+                pageNumber = 0
+            } else {
+                pageNumber += 1
+                }
+            
         } catch {
             print("😡 ERROR: Could not use URL at \(urlString) to get data and response --> \(error.localizedDescription)")
             isLoading = false
         }
+    }
+    
+    func loadNextIfNeeded(house: House) async {
+        guard let lastHouse = houses.last else {
+            return
+        }
+        if house.id == lastHouse.id && pageNumber != 0 {
+            Task {
+                await getData()
+            }
+        }
+    }
+    
+    func loadAll() async {
+        guard pageNumber != 0 else {return}
+        await getData()
+        await loadAll()
     }
 }
